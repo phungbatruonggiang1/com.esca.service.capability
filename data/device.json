@@ -1,0 +1,7 @@
+{
+  "platform": "esca",
+  "model": "Raspberry Pi 4 Model B",
+  "camera": "imx219",
+  "audio": true,
+  "display": true
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=ESCA AI capability provider
+Requires=dbus.socket
+After=dbus.socket network.target avahi-daemon.service
+Wants=avahi-daemon.service
+
+[Service]
+Type=dbus
+BusName=vn.sparc.esca.Capability1
+ExecStart=/usr/sbin/esca-capabilityd
+Restart=on-failure
+RestartSec=2
+StateDirectory=esca/capability
+
+[Install]
+WantedBy=multi-user.target
